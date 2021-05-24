@@ -2,12 +2,11 @@
   <div class="home">
     <h1>{{ message }}</h1>
     <div v-for="recipe in recipes" v-bind:key="recipe.id">
-      <h4>Title: {{ recipe.name }}</h4>
+      <h4>Title: {{ recipe.title }}</h4>
       <h4>Chef: {{ recipe.chef }}</h4>
       <h4>Ingredients: {{ recipe.ingredients }}</h4>
-      <h4>Directions: {{ recipe.directions }}</h4>
-      <h4>Cateogry: {{ recipe.category_id }}</h4>
-      <h1>__</h1>
+      <h4>Title: {{ recipe.title }}</h4>
+      <h4>Title: {{ recipe.title }}</h4>
     </div>
   </div>
 </template>
