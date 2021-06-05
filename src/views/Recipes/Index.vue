@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="index">
     <h1>{{ message }}</h1>
     <div v-for="recipe in recipes" v-bind:key="recipe.id">
       <router-link :to="`/recipes/${recipe.id}`">

@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="recipes-show">
     <h1>{{ recipe.name }}</h1>
     <h3>{{ recipe.ingredients }}</h3>
     <h3>{{ recipe.directions }}</h3>

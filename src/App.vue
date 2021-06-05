@@ -6,6 +6,8 @@
       <router-link to="/about">About</router-link>
       |
       <router-link to="/recipes">Recipes Index</router-link>
+      |
+      <router-link to="/recipe/new">New Recipe</router-link>
     </div>
     <router-view />
   </div>

@@ -3,6 +3,7 @@ import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import Index from "../views/recipes/Index.vue";
 import Show from "../views/recipes/Show.vue";
+import NewRecipe from "../views/recipes/NewRecipe.vue";
 
 Vue.use(VueRouter);
 
@@ -22,13 +23,18 @@ const routes = [
   },
   {
     path: "/recipes",
-    name: "Index",
+    name: "index",
     component: Index,
   },
   {
     path: "/recipes/:id",
     name: "recipes-show",
     component: Show,
+  },
+  {
+    path: "/recipe/new",
+    name: "recipes-new",
+    component: NewRecipe,
   },
 ];
 
