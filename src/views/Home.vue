@@ -1,14 +1,14 @@
 <template>
   <div class="home">
     <h1>{{ message }}</h1>
-    <div v-for="recipe in recipes" v-bind:key="recipe.id">
+    <!-- <div v-for="recipe in recipes" v-bind:key="recipe.id">
       <h4>Title: {{ recipe.name }}</h4>
       <h4>Chef: {{ recipe.chef }}</h4>
       <h4>Ingredients: {{ recipe.ingredients }}</h4>
       <h4>Directions: {{ recipe.directions }}</h4>
       <h4>Cateogry: {{ recipe.category_id }}</h4>
       <h1>__</h1>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -19,8 +19,7 @@ import axios from "axios";
 export default {
   data: function () {
     return {
-      message:
-        "Welcome to Vue.js! Now, lets get cookin on creating kind-of-vegan!",
+      message: "Welcome to Vue.js! Now, lets get cookin on creating kind-of-vegan!",
       recipes: [],
     };
   },
