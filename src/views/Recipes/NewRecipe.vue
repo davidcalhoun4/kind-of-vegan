@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="recipes-new">
     <h1>{{ message }}</h1>
     <ul>
       <li v-for="error in errors" v-bind:key="error">{{ error }}</li>

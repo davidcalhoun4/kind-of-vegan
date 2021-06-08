@@ -4,6 +4,9 @@ import Home from "../views/Home.vue";
 import Index from "../views/recipes/Index.vue";
 import Show from "../views/recipes/Show.vue";
 import NewRecipe from "../views/recipes/NewRecipe.vue";
+import EditRecipe from "../views/recipes/EditRecipe.vue";
+import Signup from "../views/Signup.vue";
+import Login from "../views/Login.vue";
 
 Vue.use(VueRouter);
 
@@ -35,6 +38,21 @@ const routes = [
     path: "/recipe/new",
     name: "recipes-new",
     component: NewRecipe,
+  },
+  {
+    path: "/recipes/:id/edit",
+    name: "recipes-edit",
+    component: EditRecipe,
+  },
+  {
+    path: "/signup",
+    name: "signup",
+    component: Signup,
+  },
+  {
+    path: "/login",
+    name: "login",
+    component: Login,
   },
 ];
 
