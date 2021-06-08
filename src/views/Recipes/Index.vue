@@ -8,7 +8,7 @@
       <h4>Chef: {{ recipe.chef }}</h4>
       <h4>Ingredients: {{ recipe.ingredients }}</h4>
       <h4>Directions: {{ recipe.directions }}</h4>
-      <h4>Cateogry: {{ recipe.category_id }}</h4>
+      <h4>Best Eaten: {{ recipe.best_eaten }}</h4>
 
       <h1>__</h1>
     </div>

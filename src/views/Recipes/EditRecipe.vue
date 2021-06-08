@@ -29,6 +29,7 @@
       <br />
       <input type="submit" class="btn btn-primary" value="Update" />
     </form>
+    <button v-on:click="destroyRecipe()">Delete</button>
   </div>
 </template>
 
@@ -62,13 +63,28 @@ export default {
       axios
         .patch(`/recipes/${this.recipe.id}`, params)
         .then((response) => {
-          console.log(response.data);
+          console.log(response);
           this.$router.push(`/recipes/${this.recipe.id}`);
         })
         .catch((error) => {
           console.log("recipe update error", error.response);
           this.errors = error.response.data.errors;
         });
+    },
+    destroyRecipe: function () {
+      if (confirm("Are you sure you want to delete this recipe?")) {
+        axios
+          .delete(`/recipes/${this.recipe.id}`)
+          .then((response) => {
+            console.log(response.data);
+            console.log("recipe deleted");
+            this.$router.push("/recipes");
+          })
+          .catch((error) => {
+            console.log("recipe update error", error.response);
+            this.errors = error.response.data.errors;
+          });
+      }
     },
   },
 };

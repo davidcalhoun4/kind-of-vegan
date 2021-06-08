@@ -4,6 +4,7 @@
     <h3>{{ recipe.ingredients }}</h3>
     <h3>{{ recipe.directions }}</h3>
     <h3>Chef: {{ recipe.chef }}</h3>
+    <h3>Best Eaten: {{ recipe.best_eaten }}</h3>
     <h3>{{ recipe.created }}</h3>
     <router-link :to="`/recipes/${recipe.id}/edit`"><button>Edit</button></router-link>
   </div>
