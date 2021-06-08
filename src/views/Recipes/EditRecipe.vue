@@ -20,7 +20,7 @@
       <input type="text" v-model="recipe.image" />
       <br />
       Best Eaten:
-      <select name="category" v-model="recipe.time_of_day">
+      <select name="category" v-model="recipe.category_id">
         <option value="1">Breakfast</option>
         <option value="2">Lunch</option>
         <option value="3">Dinner</option>
@@ -41,10 +41,14 @@ export default {
     return {
       recipe: {},
       message: "Edit Recipe",
+      errors: [],
     };
   },
   created: function () {
-    console.log("DOM loaded");
+    axios.get(`/recipes/${this.$route.params.id}`).then((response) => {
+      this.recipe = response.data;
+      console.log(this.recipe);
+    });
   },
   methods: {
     updateRecipe: function () {
@@ -53,12 +57,12 @@ export default {
         ingredients: this.recipe.ingredients,
         directions: this.recipe.directions,
         image: this.recipe.image,
-        time_of_day: this.recipe.time_of_day,
+        category_id: this.recipe.category_id,
       };
       axios
         .patch(`/recipes/${this.recipe.id}`, params)
         .then((response) => {
-          console.log("recipe updated", response);
+          console.log(response.data);
           this.$router.push(`/recipes/${this.recipe.id}`);
         })
         .catch((error) => {
