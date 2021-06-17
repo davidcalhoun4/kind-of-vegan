@@ -1,7 +1,9 @@
 <template>
   <div class="index">
     <h1>{{ message }}</h1>
-    <div v-for="recipe in recipes" v-bind:key="recipe.id">
+    <h3>Search Recipes by Name or Ingredients:</h3>
+    <input ype="text" v-model="filter" placeholder="ie garlic, pasta, tomato" />
+    <div v-for="recipe in filterBy(recipes, filter, 'name', 'ingredients')" v-bind:key="recipe.id">
       <router-link :to="`/recipes/${recipe.id}`">
         <h4>Title: {{ recipe.name }}</h4>
       </router-link>
@@ -19,11 +21,14 @@
 
 <script>
 import axios from "axios";
+import Vue2Filters from "vue2-filters";
 export default {
+  mixins: [Vue2Filters.mixin],
   data: function () {
     return {
       message: "Recipes Index",
       recipes: [],
+      filter: "",
     };
   },
   created: function () {
