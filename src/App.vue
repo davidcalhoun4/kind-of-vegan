@@ -38,7 +38,11 @@
         </div>
       </div>
     </nav>
-    <router-view />
+    <div class="container">
+      <!-- Content here -->
+      <router-view />
+    </div>
+    <!-- <router-view /> -->
   </div>
 </template>
 
