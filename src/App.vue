@@ -1,24 +1,7 @@
 <template>
   <div id="app">
-    <!-- Header -->
-    <header id="header">
-      <a class="logo">
-        <strong>Kind of Vegan</strong>
-      </a>
-      <router-link to="/">Home</router-link>
-
-      <router-link v-if="!isLoggedIn()" to="/signup">Signup</router-link>
-
-      <router-link v-if="!isLoggedIn()" to="/login">Login</router-link>
-
-      <router-link v-if="isLoggedIn()" to="/logout">Logout</router-link>
-
-      <router-link v-if="isLoggedIn()" to="/recipes">Recipes Index</router-link>
-
-      <router-link v-if="isLoggedIn()" to="/recipe/new">New Recipe</router-link>
-    </header>
-    <!-- <div id="nav">
-      <router-link to="/">Home</router-link>
+    <div id="nav">
+      <router-link to="/">Home |</router-link>
 
       <router-link v-if="!isLoggedIn()" to="/signup">Signup |</router-link>
 
@@ -29,20 +12,33 @@
       <router-link v-if="isLoggedIn()" to="/recipes">Recipes Index |</router-link>
 
       <router-link v-if="isLoggedIn()" to="/recipe/new">New Recipe</router-link>
-    </div> -->
+    </div>
     <router-view />
-
-    <footer id="footer">
-      <p class="copyright">
-        &copy; Untitled. All rights reserved. Design:
-        <a href="https://html5up.net">HTML5 UP</a>
-        .
-      </p>
-    </footer>
   </div>
 </template>
 
-<style></style>
+<style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+
+#nav {
+  padding: 30px;
+}
+
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+#nav a.router-link-exact-active {
+  color: #42b983;
+}
+</style>
 
 <script>
 export default {

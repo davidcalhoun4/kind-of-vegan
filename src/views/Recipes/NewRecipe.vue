@@ -18,7 +18,7 @@
     Image:
     <input type="text" v-model="newRecipeImage" />
     <br />
-    <!-- Best Eaten:
+    Best Eaten:
     <br />
     Breakfast
     <input value="1" type="radio" id="Breakfast" name="Breakfast" v-model="newRecipeCategory" />
@@ -31,14 +31,13 @@
     <br />
     Snack
     <input value="4" type="radio" id="Snack" name="Snack" v-model="newRecipeCategory" />
-    <br /> -->
-    Best Eaten:
-    <select name="category" v-model="newRecipeCategory">
+    <br />
+    <!-- <select name="category" v-model="newRecipeCategory">
       <option value="1">Breakfast</option>
       <option value="2">Lunch</option>
       <option value="3">Dinner</option>
       <option value="4">Snack</option>
-    </select>
+    </select> -->
     <br />
     <button v-on:click="createRecipe()">Create</button>
   </div>
